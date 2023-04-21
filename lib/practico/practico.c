@@ -24,9 +24,12 @@ int32_t suma(int32_t A,int32_t B)
 int64_t sumatoria(int32_t n,const int32_t *b)
 {
     // reemplazar el código de abajo con la solución
-    (void)n;
-    (void)b;
-    return 0;
+    int sumatoria = 0;
+    
+    for (;n>0;n--){
+        sumatoria = sumatoria + b[n-1];
+    }
+    return sumatoria;
 }
 
 /**
