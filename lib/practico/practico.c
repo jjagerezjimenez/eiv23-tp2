@@ -40,11 +40,14 @@ int64_t sumatoria(int32_t n,const int32_t *b)
  * @return Posición del mayor número k tal que b[k] <= b[i] para todo i en {0,..,n-1}
  */
 int32_t posicion_maximo(int32_t n,const int32_t *b)
-{
     // reemplazar el código de abajo con la solución
-    (void)n;
-    (void)b;
-    return 0;
+{   int maximo = b[0], posicion=0;
+
+    for (;n>0;n--){
+        if (b[n-1] > maximo) {maximo = b[n-1]; posicion = n-1;};
+
+    }
+    return posicion;
 }
 
 /**
@@ -57,8 +60,13 @@ int32_t posicion_maximo(int32_t n,const int32_t *b)
  * @param b Puntero al primer número
  */
 void ordenar_en_sitio_menor_a_mayor(int32_t n,int32_t *b)
-{
+{   int x=0, posicion=0;
     // reemplazar el código de abajo con la solución
-    (void)n;
-    (void)b;
+    for (;n>0;n--){
+        x = b[n-1];
+        posicion = posicion_maximo(n,b);
+        b[n-1] = b[posicion];
+        b[posicion] = x;
+    }
+    return ;
 }
