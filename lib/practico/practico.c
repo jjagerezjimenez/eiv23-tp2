@@ -11,9 +11,7 @@
 int32_t suma(int32_t A,int32_t B)
 {
     // reemplazar el código de abajo con la solución
-    (void)A;
-    (void)B;
-    return 0;
+   return A+B;
 }
 
 /**
